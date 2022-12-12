@@ -33,7 +33,7 @@ int main()
         repeat:
         printf("%s it's your turn\n", ptr);
         scanf("%d",&n);
-        // getchar();
+         getchar();
         // if(n>2){
         //     printf("wrong input try again\n");
         //     goto repeat;
@@ -61,6 +61,9 @@ int main()
     }
     printf("\n\n\n");
 
+    printf("zain:%d\n",win);
+    printf("computer:%d\n",loose);
+
 
     if( win==loose || draw==rounds ){
         printf("match drawn\n");
@@ -72,9 +75,13 @@ int main()
     else if(win<loose || win<draw && draw<loose){
         printf("oops you have lost the game\n");
     }
+
+    win=0;
+    loose=0;
 int play;
     printf("do you want to play again if yes tab 1\n");
     scanf("%d",&play);
+    
     if(play==1){
         goto playagain;
     }
